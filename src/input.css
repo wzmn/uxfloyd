@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+form {
+    position: relative;
+}
+form .message {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+form.success .message {
+    height: 60px;
+    overflow: hidden;
+}
+
+.loader {
+    transition: all 0.5s ease;
+    position: absolute;
+    background: #7979796e;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -1;
+}
+form.loading .loader {
+    opacity: 1;
+    z-index: 1;
+}
+.loader span {
+    position: relative;
+    display: inline-block;
+    animation: mymove 4s infinite;
+}
+@keyframes mymove {
+    0%   {top: 0px;}
+    30%  {top: -30px;}
+    70%  {top: -30px;transform: rotate(360deg);}
+    100% {top: 0px;transform: rotate(360deg);}
+}
+
+
+html {
+    scroll-behavior: smooth;
+  }
+  .image::before {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    border: 10px solid #78589F;
+    position: absolute;
+    top: -30px;
+    z-index: -1;
+    left: -50px;
+  }
+  .play span {
+    width: 50px;
+    height: 50px;
+  }
+  .hang {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    transform: rotate(-24deg);
+  }
+  .drop {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    transform: rotate(10deg);
+  }
+  .card {
+    bottom: 0px;
+    height: 85px;
+    transform: translateY(55px) translateX(15px);
+    transition: all 0.7s ease;
+  }
+  .cover:hover .card {
+    height: 100%;
+    width: 100%;
+    transform: translateY(0px) translateX(0px);
+  }
+h1, .font-primary {
+    font-family: 'Sigmar', cursive;
+}
+.nav, .font-secondary {
+    font-family: 'Delius Swash Caps', cursive;
+}
+.text-outline {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}

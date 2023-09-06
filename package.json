@@ -1,0 +1,19 @@
+{
+  "name": "uxfloyd",
+  "version": "1.0.0",
+  "description": "uxfloyd.com template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": [
+    "responsive",
+    "tailwind"
+  ],
+  "author": "Wiseman",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
