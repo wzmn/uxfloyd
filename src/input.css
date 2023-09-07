@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-container {
+  right: -100%; 
+  transition: all 1s ease;
+}
+.nav-container.open {
+  right: 0;
+}
 form {
     position: relative;
 }
